@@ -80,7 +80,7 @@ public class RecipeItemDetailActivity extends AppCompatActivity {
                     IngrendientDetailFragment fragment = new IngrendientDetailFragment();
                     fragment.setArguments(arguments);
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.recipe_item_detail_container, fragment, "ingredient")
+                            .replace(R.id.recipeitem_detail_container, fragment, "ingredient")
                             .commit();
 
                     getSupportActionBar().setTitle(R.string.ingredients);
@@ -96,7 +96,7 @@ public class RecipeItemDetailActivity extends AppCompatActivity {
                     Step recipeStep = recipe.getSteps().get(position-1);
 
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.recipe_item_detail_container,
+                            .replace(R.id.recipeitem_detail_container,
                                     StepDetailFragment.newInstance(
                                             recipeStep), "steps")
                             .commit();
